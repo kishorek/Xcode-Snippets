@@ -1,9 +1,11 @@
 // NSFetchedResultsControllerDelegate
 // Placeholders for the fetched results controller delegate methods
-// 
-// Platform: iOS
+//
+// IDECodeSnippetIdentifier: B579EAF5-5943-4A51-A4E5-572AD2C70B00
+// IDECodeSnippetLanguage: Xcode.SourceCodeLanguage.Objective-C
+// IDECodeSnippetUserSnippet: 1
 // Language: Objective-C
-// Completion Scope: Class Implementation
+// Platform: iOS
 
 #pragma mark - NSFetchedResultsControllerDelegate
 
