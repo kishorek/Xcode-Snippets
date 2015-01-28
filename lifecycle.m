@@ -1,11 +1,11 @@
 // UIViewController Lifecycle
 // Placeholders for all of the view controller lifecycle methods
 //
+// IDECodeSnippetCompletionScopes: [All]
 // IDECodeSnippetIdentifier: DE8688D0-E0C2-4453-89AD-A680F27BC150
 // IDECodeSnippetLanguage: Xcode.SourceCodeLanguage.Objective-C
 // IDECodeSnippetUserSnippet: 1
-// Language: Objective-C
-// Platform: iOS
+// IDECodeSnippetVersion: 2
 
 #pragma mark - UIViewController
 
