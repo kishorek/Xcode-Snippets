@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+-(void) pinched:(UIPinchGestureRecognizer *) pnc{
+    
+    if([pnc state] == UIGestureRecognizerStateBegan) {
+        self.lastScale = 1.0;
+    }
+    
+    CGFloat newScale = 1.0 - (self.lastScale - pnc.scale);
+    CGAffineTransform currentTransform = self.tagView.transform;
+    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, newScale, newScale);
+    [self.tagView setTransform:newTransform];
+    self.lastScale = [pnc scale];
+
+    
+//    self.tagView.transform = CGAffineTransformMakeScale(pnc.scale, pnc.scale);
+    self.tagFrame = NSStringFromCGRect(self.tagView.frame);
+}
+
+-(void) rotated:(UIRotationGestureRecognizer *) rt{
+
+    if([rt state] == UIGestureRecognizerStateEnded) {
+        self.lastRotation = 0.0;
+        return;
+    }
+    
+    CGFloat rotation = 0.0 - (self.lastRotation - [rt rotation]);
+    CGAffineTransform currentTransform = self.tagView.transform;
+    CGAffineTransform newTransform = CGAffineTransformRotate(currentTransform,rotation);
+    [self.tagView setTransform:newTransform];
+    self.lastRotation = [rt rotation];
+
+    //self.tagView.transform = CGAffineTransformRotate(rt.rotation);
+    self.tagFrame = NSStringFromCGRect(self.tagView.frame);    
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>7963B9EA-ADFB-4D9E-8393-5EBADBBD3B6D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Combined gestures</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
