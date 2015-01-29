@@ -2,11 +2,11 @@
 // Define a Swift struct type.
 //
 // IDECodeSnippetCompletionPrefix: struct
-// IDECodeSnippetCompletionScopes: [ClassImplementation,TopLevel]
-// IDECodeSnippetIdentifier: 1DD6A21D-566D-4FE8-A744-2955BAB82B2F
+// IDECodeSnippetCompletionScopes: [TopLevel,ClassImplementation]
+// IDECodeSnippetIdentifier: 135E3059-9B12-4F46-A8AF-F094ECD53DC8
 // IDECodeSnippetLanguage: Xcode.SourceCodeLanguage.Swift
 // IDECodeSnippetUserSnippet: 1
-// IDECodeSnippetVersion: 1
+// IDECodeSnippetVersion: 2
 struct <#name#> {
     <#properties and methods#>
 }
