@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    //To re-enable display locking, just set the timer disabled to no.
+    UIApplication *thisApp = [UIApplication sharedApplication];
+    thisApp.idleTimerDisabled = YES;
+
+      /* Source: http://snipplr.com/view/41073/stopping-the-iphone-from-locking-the-display/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>1748a1e6-ed4c-4b2b-8579-d41bfc7f27cb</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Stopping the iPhone from locking the display</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

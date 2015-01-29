@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>ClassImplementation</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>
+#pragma mark - admanagerdelegate
+
+- (void)receivedAdView:(UIView *)view
+{
+    if (view)
+    {
+        view.tag = kAdMobViewTag;
+        
+        if ([self.view viewWithTag:kAdMobViewTag])
+        {
+            [[self.view viewWithTag:kAdMobViewTag] removeFromSuperview];
+            [self.view addSubview:view];
+            return;
+        }
+        
+        view.frame = CGRectMake(0.0,
+                                self.view.frame.size.height,
+                                view.frame.size.width,
+                                view.frame.size.height);
+        [self.view addSubview:view];
+        
+        [UIView animateWithDuration:1.0 animations:^ {
+            view.frame = CGRectMake(0.0,
+                                    self.view.frame.size.height-
+                                    view.frame.size.height,
+                                    view.frame.size.width,
+                                    view.frame.size.height);
+        } completion:^(BOOL finished) {
+            if (finished) {
+                self.drawTableView.frame = CGRectMake(self.drawTableView.frame.origin.x,
+                                                      self.drawTableView.frame.origin.y,
+                                                      self.drawTableView.frame.size.width,
+                                                      self.view.frame.size.height-
+                                                      view.frame.size.height);
+            }
+        }];
+    }
+}
+
+-(void)disableAdsWhenNotified
+{
+    [UIView animateWithDuration:1.0 delay:0 options:UIViewAnimationOptionCurveEaseOut
+                     animations:^
+     {
+         if ([self.view viewWithTag:kAdMobViewTag]){
+             [self.view viewWithTag:kAdMobViewTag].alpha = 0;
+         }
+         self.drawTableView.frame = CGRectMake(self.drawTableView.frame.origin.x,
+                                               self.drawTableView.frame.origin.y,
+                                               self.drawTableView.frame.size.width,
+                                               self.view.frame.size.height
+                                               );
+     } completion:^(BOOL finished) {
+         if (finished)
+         {
+             
+             if ([self.view viewWithTag:kAdMobViewTag])
+             {
+                 [[self.view viewWithTag:kAdMobViewTag] removeFromSuperview];
+             }
+         }
+     }];
+}</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>B196FA96-FD3A-4877-A7E7-BAEFAD920D1D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>AdManager Delegate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

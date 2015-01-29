@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // in viewDidLoad
+    self.locationManager = [[CLLocationManager alloc] init];
+    locationManager.delegate = self;
+    locationManager.desiredAccuracy = kCLLocationAccuracyBest;
+    [locationManager startUpdatingLocation];
+     
+    // new methods
+     
+     
+    // achou a localização
+    - (void)locationManager:(CLLocationManager *)manager didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation
+    {
+    NSLog(@"Achou local");
+     
+    [locationManager stopUpdatingLocation];
+     
+    // this creates a MKReverseGeocoder to find a placemark using the found coordinates
+    MKReverseGeocoder *geoCoder = [[MKReverseGeocoder alloc] initWithCoordinate:newLocation.coordinate];
+    geoCoder.delegate = self;
+    [geoCoder start];
+    }
+     
+     
+    // this delegate method is called if an error occurs in locating your current location
+    - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+    {
+    NSLog(@"locationManager:%@ didFailWithError:%@", manager, error);
+    }
+     
+     
+    - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFailWithError:(NSError *)error{
+    NSLog(@"Problemas com o reverse geocoder");
+     
+    }
+     
+    - (void)reverseGeocoder:(MKReverseGeocoder *)geocoder didFindPlacemark:(MKPlacemark *)placemark{
+     
+    [someError show];
+    [someError release];*/
+     
+    self.location = [placemark administrativeArea];
+
+      /* Source: http://snipplr.com/view/24669/user-location/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>9f9cf581-3e41-83f2-0708-34c611c2d885</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>User location</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

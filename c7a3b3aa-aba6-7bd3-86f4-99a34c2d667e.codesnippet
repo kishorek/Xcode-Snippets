@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string> #define RGB(r, g, b) 
+    [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+
+    @implementation UINavigationBar (CustomImage)
+    - (void)drawRect:(CGRect)rect
+    {
+    NSLog(@"self.topItem.title = %@", self.topItem.title);
+    CGRect frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
+    UIImage *image = [UIImage imageNamed: @"background.png"];
+    [image drawInRect:frame];
+    UILabel *label = [[[UILabel alloc] initWithFrame:frame] autorelease];
+    [label setBackgroundColor:[UIColor clearColor]];
+    label.font = [UIFont boldSystemFontOfSize: 20.0];
+    //label.shadowColor = [UIColor colorWithWhite:1.0 alpha:1];
+    label.textAlignment = UITextAlignmentCenter;
+    label.textColor = RGB(73, 81, 85);
+    label.text = self.topItem.title;
+    self.topItem.titleView = label;
+    self.tintColor = RGB(229, 239, 246);
+    }
+    @end
+
+      /* Source: http://snipplr.com/view/40331/custom-navigation-bar-for-iphone/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>c7a3b3aa-aba6-7bd3-86f4-99a34c2d667e</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Custom Navigation Bar</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

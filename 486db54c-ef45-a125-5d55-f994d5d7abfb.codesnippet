@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString *path = [[NSBundle mainBundle] pathForResource:@"resourcefile" ofType:@"plist"];
+NSDictionary *dict = [[NSDictionary alloc] initWithContentsOfFile:path];
+
+      /* Source: http://snipplr.com/view/40132/load-a-plist-file-from-the-app-bundle/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>486db54c-ef45-a125-5d55-f994d5d7abfb</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Load a plist from app bundle</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

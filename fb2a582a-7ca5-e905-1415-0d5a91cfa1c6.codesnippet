@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(issue_id == %i)", 2];
+    NSArray *newArray = [youDictionaryArray filteredArrayUsingPredicate:predicate];
+
+      /* Source: http://stackoverflow.com/questions/3503141/nsdictionary-filtering-and-sorting/3503217#3503217  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>fb2a582a-7ca5-e905-1415-0d5a91cfa1c6</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Filter array using NSPredicate</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

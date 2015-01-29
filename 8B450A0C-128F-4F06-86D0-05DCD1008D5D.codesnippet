@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>NSString *cellId = @"SpinnerCell";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellId];
+        if (cell == nil) {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellId];
+            UIActivityIndicatorView *activity = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleWhiteLarge];
+            activity.frame = CGRectMake(CGRectGetMidX(cell.frame), CGRectGetMidY(cell.frame), activity.frame.size.width, activity.frame.size.height);
+            [cell addSubview:activity];
+            self.spinner = activity;
+            
+            UIView *backView = [[UIView alloc] initWithFrame:CGRectZero];
+            backView.backgroundColor = [UIColor clearColor];
+            cell.backgroundView = backView;
+
+        }
+
+        [self.spinner startAnimating];
+        
+        return  cell;</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>8B450A0C-128F-4F06-86D0-05DCD1008D5D</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>SpinnerCell</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

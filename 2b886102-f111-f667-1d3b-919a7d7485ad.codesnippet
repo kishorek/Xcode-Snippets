@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // Define the XML Document
+    NSXMLDocument* doc = [[NSXMLDocument alloc] initWithXMLString:[NSString stringWithContentsOfFile:@"/folder/with/sample.xml"]];
+     
+    // Create the arrays here
+    NSMutableArray* objects = [[NSMutableArray alloc] initWithCapacity:10];
+    NSMutableArray* descriptions = [[NSMutableArray alloc] initWithCapacity:10];
+     
+    NSXMLDocument* doc = [[NSXMLDocument alloc] init...];
+    NSXMLElement* root = [doc rootElement];
+    NSArray* objectElements = [root nodesForXPath:@"//object" error:nil];
+    for(NSXMLElement* xmlElement in objectElements)
+    [objects addObject:[xmlElement stringValue]];
+     
+    NSArray* descElements = [root nodesForXPath:@"//description" error:nil];
+    for(NSXMLElement* xmlElement in descElements)
+    [descriptions addObject:[xmlElement stringValue]];
+     
+    [doc release];
+    [objects release];
+    [descriptions release];
+
+      /* Source: http://cocoadev.com/forums/comments.php?DiscussionID=163  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>2b886102-f111-f667-1d3b-919a7d7485ad</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Simple XML Parser</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

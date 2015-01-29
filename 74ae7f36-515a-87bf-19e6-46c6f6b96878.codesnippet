@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    - (void) doAlertWithTextField {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@&amp;quot;Congratulations!&amp;quot; message:@&amp;quot;You earned a top score! Enter your name:nn&amp;quot;
+    delegate:self
+    cancelButtonTitle:nil
+    otherButtonTitles:@&amp;quot;OK&amp;quot;, nil];
+    alert.tag = kTag_EnterNameAlert;
+     
+    CGRect entryFieldRect = CGRectZero;
+    if( UIDeviceOrientationIsPortrait( [UIApplication sharedApplication].statusBarOrientation ) ) {
+    entryFieldRect = CGRectMake(12, 90, 260, 25);
+    }
+    else {
+    entryFieldRect = CGRectMake(12, 72, 260, 25);
+    }
+     
+    UITextField *nameEntryField = [[UITextField alloc] initWithFrame:entryFieldRect];
+    nameEntryField.tag = kTag_NameEmtryField;
+    nameEntryField.backgroundColor = [UIColor whiteColor];
+    nameEntryField.keyboardType = UIKeyboardTypeAlphabet;
+    nameEntryField.keyboardAppearance = UIKeyboardAppearanceAlert;
+    nameEntryField.autocorrectionType = UITextAutocorrectionTypeNo;
+    nameEntryField.clearButtonMode = UITextFieldViewModeWhileEditing;
+    [alert addSubview:nameEntryField];
+    [nameEntryField becomeFirstResponder];
+    [nameEntryField release];
+     
+    [alert show];
+    [alert release];
+    }
+
+      /* Source: http://snipplr.com/view/40995/uitextfield-in-uialertview/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>74ae7f36-515a-87bf-19e6-46c6f6b96878</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UITextfield on UIAlertview</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

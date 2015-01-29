@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    UIButton *infoButton = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    infoButton.frame = CGRectMake(10, 10, 16, 16);
+    infoButton.backgroundColor = [UIColor clearColor];
+    [infoButton addTarget:self action:@selector(buttonPressed:)
+    forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:infoButton];
+
+      /* Source: http://snipplr.com/view/38815/iphone--create-info-button/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>4dedf47e-d336-44d8-0ee0-7818f964d224</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Add info button</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

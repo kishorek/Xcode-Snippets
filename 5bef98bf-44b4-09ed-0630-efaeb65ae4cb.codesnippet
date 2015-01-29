@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    // place this code in a UIViewController subclass
+     
+    - (void)debugButtonPressed:(id)sender
+    {
+    UIActionSheet* action = [[UIActionSheet alloc]
+    initWithTitle:@"Menu"
+    delegate:self
+    cancelButtonTitle:@"Continue"
+    destructiveButtonTitle:@"Quit"
+    otherButtonTitles:@"Debug",nil ];
+    [action showInView:self.view];
+    [action release];
+    }
+     
+    - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    switch (buttonIndex) {
+    case 0: // continue
+    NSLog(@"Continue");
+    break;
+    case 1: // Quit
+    NSLog(@"Quit");
+    break;
+    case 2: // Debug
+    NSLog(@"Debug");
+    break;
+    }
+    }
+
+      /* Source: http://snipplr.com/view/32554/iphone-uiactionsheet--pop-up-list-of-options/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>5bef98bf-44b4-09ed-0630-efaeb65ae4cb</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>UIActionSheet - pop up list of options</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

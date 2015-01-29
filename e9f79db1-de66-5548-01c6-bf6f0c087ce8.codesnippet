@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    -(void) mic{
+     
+    [audioSession setCategory:AVAudioSessionCategoryPlayAndRecord error: nil];
+    time=0;
+     
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSDate *now = [NSDate dateWithTimeIntervalSinceNow:0];
+    NSString *caldate = [now description];
+    NSString *recorderFilePath = [[NSString stringWithFormat:@"%@/%@.caf", documentsDirectory, caldate] retain];
+     
+    NSURL *url = [NSURL fileURLWithPath:recorderFilePath];
+    NSDictionary *settings = [NSDictionary dictionaryWithObjectsAndKeys:
+    [NSNumber numberWithFloat: 44100.0], AVSampleRateKey,
+    [NSNumber numberWithInt: kAudioFormatAppleLossless], AVFormatIDKey,
+    [NSNumber numberWithInt: 1], AVNumberOfChannelsKey,
+    [NSNumber numberWithInt: AVAudioQualityMax], AVEncoderAudioQualityKey,
+    nil];
+     
+    NSError *error;
+     
+    recorder = [[AVAudioRecorder alloc] initWithURL:url settings:settings error:&amp;error];
+     
+    if (recorder) {
+    [recorder prepareToRecord];
+    recorder.meteringEnabled = YES;
+    [recorder record];
+    levelTimer = [NSTimer scheduledTimerWithTimeInterval: 0.03 target: self selector: @selector(levelTimerCallback:) userInfo: nil repeats: YES];
+    }
+    }
+     
+    - (void)levelTimerCallback:(NSTimer *)t {
+    [recorder updateMeters];
+    isTimerValid=YES;
+    if([recorder averagePowerForChannel:0]&gt;-25){
+    //record in progress
+    }
+    }
+
+      /* Source: http://snipplr.com/view/45508/record-sound-in-iphone/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>e9f79db1-de66-5548-01c6-bf6f0c087ce8</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Record a sound</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDECodeSnippetCompletionScopes</key>
+	<array>
+		<string>CodeBlock</string>
+	</array>
+	<key>IDECodeSnippetContents</key>
+	<string>    NSString *path = [[NSHomeDirectory() stringByAppendingPathComponent:@"Documents"]
+    stringByAppendingPathComponent:@"images"];
+     
+    // save the file
+    NSString *imagePath = [path stringByAppendingPathComponent:[NSString stringWithFormat:@"%@.png",
+    [imageName stringByReplacingOccurrencesOfString:@" " withString:@"_"]]];
+    if ([[NSFileManager defaultManager] fileExistsAtPath:imagePath]) {
+    // delete if exist
+    [[NSFileManager defaultManager] removeItemAtPath:imagePath error:nil];
+    }
+     
+    NSData *imageDate = [NSData dataWithData:UIImagePNGRepresentation(image)];
+     
+    [imageDate writeToFile: imagePath atomically: YES];
+
+      /* Source: http://snipplr.com/view/37641/save-image-to-documents-folder/  */</string>
+	<key>IDECodeSnippetIdentifier</key>
+	<string>fedf0a8b-b08a-83f7-7050-19f06df72415</string>
+	<key>IDECodeSnippetLanguage</key>
+	<string>Xcode.SourceCodeLanguage.Objective-C</string>
+	<key>IDECodeSnippetPlatformFamily</key>
+	<string>iphoneos</string>
+	<key>IDECodeSnippetTitle</key>
+	<string>Save image to Documents folder</string>
+	<key>IDECodeSnippetUserSnippet</key>
+	<true/>
+	<key>IDECodeSnippetVersion</key>
+	<integer>2</integer>
+</dict>
+</plist>
