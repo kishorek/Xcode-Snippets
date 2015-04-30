@@ -1,6 +1,7 @@
 // UITextField max length
 // 
 //
+// IDECodeSnippetCompletionPrefix: UITextField max length
 // IDECodeSnippetCompletionScopes: [CodeBlock]
 // IDECodeSnippetIdentifier: 20F6BD0F-A7AE-4B00-B1C2-03CF38A9CBD9
 // IDECodeSnippetLanguage: Xcode.SourceCodeLanguage.Objective-C
