@@ -6,7 +6,7 @@
 // IDECodeSnippetIdentifier: 20F6BD0F-A7AE-4B00-B1C2-03CF38A9CBD9
 // IDECodeSnippetLanguage: Xcode.SourceCodeLanguage.Objective-C
 // IDECodeSnippetUserSnippet: 1
-// IDECodeSnippetVersion: 0
+// IDECodeSnippetVersion: 2
 #define MAXLENGTH 4
 
 - (BOOL)textField:(UITextField *) textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
